@@ -1,7 +1,7 @@
 :root{
     /* color */
-    --color-main: #222;
-    --color-main-hover: #000;
+    --color-main: #1367e7;
+    --color-main-hover: #054ab4;
     --color-white: #fff;
     --color-dark: #000;
 
@@ -15,6 +15,7 @@
     --container-width: 160rem;
 
     /* grid */
+    --grid-template-1: repeat(1, 1fr);
     --grid-template-2: repeat(2, 1fr);
     --grid-template-3: repeat(3, 1fr);
     --grid-template-4: repeat(4, 1fr);
@@ -29,39 +30,6 @@
     --font-size-36: 3.6rem;
     --font-size-42: 4.2rem;
     --font-size-60: 6.0rem;
-
-    /* google icons variation */
-    --icon-empty-100-0: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 20;
-    --icon-empty-200-0: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 20;
-    --icon-empty-300-0: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
-    --icon-empty-400-0: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
-    --icon-empty-500-0: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 20;
-    --icon-empty-600-0: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 20;
-    --icon-empty-700-0: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 20;
-
-    --icon-empty-100-1: 'FILL' 0, 'wght' 100, 'GRAD' 1, 'opsz' 20;
-    --icon-empty-200-1: 'FILL' 0, 'wght' 200, 'GRAD' 1, 'opsz' 20;
-    --icon-empty-300-1: 'FILL' 0, 'wght' 300, 'GRAD' 1, 'opsz' 20;
-    --icon-empty-400-1: 'FILL' 0, 'wght' 400, 'GRAD' 1, 'opsz' 20;
-    --icon-empty-500-1: 'FILL' 0, 'wght' 500, 'GRAD' 1, 'opsz' 20;
-    --icon-empty-600-1: 'FILL' 0, 'wght' 600, 'GRAD' 1, 'opsz' 20;
-    --icon-empty-700-1: 'FILL' 0, 'wght' 700, 'GRAD' 1, 'opsz' 20;
-    
-    --icon-fill-100-0: 'FILL' 1, 'wght' 100, 'GRAD' 0, 'opsz' 20;
-    --icon-fill-200-0: 'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 20;
-    --icon-fill-300-0: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 20;
-    --icon-fill-400-0: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
-    --icon-fill-500-0: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 20;
-    --icon-fill-600-0: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 20;
-    --icon-fill-700-0: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 20;
-
-    --icon-fill-100-1: 'FILL' 1, 'wght' 100, 'GRAD' 1, 'opsz' 20;
-    --icon-fill-200-1: 'FILL' 1, 'wght' 200, 'GRAD' 1, 'opsz' 20;
-    --icon-fill-300-1: 'FILL' 1, 'wght' 300, 'GRAD' 1, 'opsz' 20;
-    --icon-fill-400-1: 'FILL' 1, 'wght' 400, 'GRAD' 1, 'opsz' 20;
-    --icon-fill-500-1: 'FILL' 1, 'wght' 500, 'GRAD' 1, 'opsz' 20;
-    --icon-fill-600-1: 'FILL' 1, 'wght' 600, 'GRAD' 1, 'opsz' 20;
-    --icon-fill-700-1: 'FILL' 1, 'wght' 700, 'GRAD' 1, 'opsz' 20;
 }
 
 @media screen and (max-width: 1500px) {
@@ -118,12 +86,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.6);
     backdrop-filter: blur(6px);
+    z-index: 99999;
 }
 header .navbar{/* display: flex; *//* align-items: center; */margin: 2rem 0 2rem;}
-header .home{
-}
+header .home{}
 header .home a{
     display: block;
     color: var(--color-main);
@@ -172,14 +140,15 @@ header .btn-toggle .hb-bar{
 header .btn-toggle .hb-bar ~ .hb-bar{
     margin-top: 0.4rem;
 }
-header .btn-toggle .hb-bar .hb-bar:hover,
-header .btn-toggle .hb-bar:focus{}
+header .btn-toggle:hover .hb-bar,
+header .btn-toggle:focus .hb-bar{}
 
 #main{
     position: relative;
-    padding: 12rem 0;
+    padding: 12rem 15px;
 }
-#main section{}
+#main section:not(:first-child){padding-top: 12rem;}
+#main section:not(:last-child){padding-bottom: 12rem;}
 #main section .title{
     font-size: var(--font-size-60);
     font-weight: 800;
@@ -189,35 +158,135 @@ header .btn-toggle .hb-bar:focus{}
     margin: 0 0 12rem;
 }
 
+/* about */
+.about-wrap{
+    display: grid;
+    grid-template-columns: var(--grid-template-2);
+    gap: 10rem;
+}
+
+/* greeting */
+.about-wrap .greeting{}
+.about-wrap .greeting p{
+    font-size: var(--font-size-18);
+    margin: 0 0 3rem;
+}
+.about-wrap .greeting p:last-child{margin: 0;}
+.about-wrap .greeting > p{
+    margin: 0 0 6rem;
+    font-size: var(--font-size-36);
+    font-weight: 600;
+    color: var(
+    --color-dark);
+    line-height: 1.4;
+}
+.about-wrap .greeting > p .emp{
+    position: relative;
+    color: var(--color-main);
+    font-weight: 700;
+}
+.about-wrap .greeting > p .emp.ui{}
+.about-wrap .greeting > p .emp.ux{}
+.about-wrap .greeting > p strong{
+    font-size: 5.5rem;
+    font-weight: 900;
+    color: var(--color-main);
+}
+
+.about-wrap .greeting .btn-more{
+    display: block;
+    font-size: var(--font-size-18);
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+    color: #999;
+}
+.about-wrap .greeting .btn-more:hover,
+.about-wrap .greeting .btn-more:focus{
+    color: var(--color-main-hover);
+}
+
+.about-wrap .greeting .more{
+    margin: 4rem 0 0;
+}
+.about-wrap .greeting .more.open{}
+.about-wrap .greeting .more p{
+    color: #666;
+}
+.about-wrap .greeting .more p ~ p{}
+
+/* career */
+.career-wrap{}
+.career-wrap .career{
+    margin: 0 0 3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+}
+.career-wrap li:not(:first-child){margin-top: 1rem;}
+
+.career-wrap .career .date{
+    font-weight: 700;
+    color: var(--color-main);
+    font-size: var(--font-size-24);
+}
+.career-wrap .career .issue{}
+.career-wrap .career .issue > li{
+    font-size: var(--font-size-24);
+    font-weight: 600;
+}
+.career-wrap .career .issue > li > b{}
+
+.career-wrap .experience{
+    margin-top: 2rem;
+}
+.career-wrap .experience .li-exp{}
+.career-wrap .experience .li-exp > li{
+    position: relative;
+    font-size: var(--font-size-18);
+    padding-left: 1.2rem;
+    font-weight: 400;
+}
+.career-wrap .experience .li-exp > li::before{
+    content: '';
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: var(--color-main);
+}
+
 /* portfolio */
-.portfolio-wrap{
+#portfolio-wrap{
     display: grid;
     grid-template-columns: var(--grid-template-3);
     gap: 6rem;
 }
-.portfolio-wrap .portfolio-link{display: flex;flex-direction: column;gap: 2rem;}
-.portfolio-wrap .portfolio-link .image{
+#portfolio-wrap .portfolio-link{display: flex;flex-direction: column;gap: 2rem;}
+#portfolio-wrap .portfolio-link .image{
     overflow: hidden;
     aspect-ratio: 3/2;
     box-shadow: 0 0 0 0 rgba(0,0,0,0);
     transition: all .3s ease;
     border-radius: 2rem;
 }
-.portfolio-wrap .portfolio-link img{
+#portfolio-wrap .portfolio-link img{
     width: 100%;
 }
-.portfolio-wrap .portfolio-link .comp-name{
+#portfolio-wrap .portfolio-link .comp-name{
     text-align: center;
     font-size: var(--font-size-22);
     font-weight: 600;
     color: var(--color-dark);
 }
-.portfolio-wrap .portfolio-link:hover{}
-.portfolio-wrap .portfolio-link:hover .image{
+#portfolio-wrap .portfolio-link:hover{}
+#portfolio-wrap .portfolio-link:hover .image{
     box-shadow: 0 0.6rem 3.5rem -0.6rem rgba(0,0,0,0.21);
 }
-.portfolio-wrap .portfolio-link:hover img{}
-.portfolio-wrap .portfolio-link:hover .comp-name{}
+#portfolio-wrap .portfolio-link:hover img{}
+#portfolio-wrap .portfolio-link:hover .comp-name{}
 
 footer{
     padding: 4rem 0 4rem;
@@ -236,7 +305,7 @@ footer .text .contact{
 }
 footer .text .contact .material-symbols-outlined{
     font-size: var(--font-size-30);
-    font-variation-settings: var(--icon-empty-300-1);
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 1, 'opsz' 20;;
 }
 footer .text .contact .txt{
     font-size: var(--font-size-18);
@@ -257,6 +326,28 @@ footer .text .copyrights{
         padding-left: 15px;
         padding-right: 15px;
     }
+    /* porfolio */
+    #portfolio-wrap{
+        gap: 3rem;
+    }
+
+    /* about */
+    .about-wrap{
+        grid-template-columns: var(--grid-template-1);
+        gap: 4rem;
+    }
 }
-@media screen and (max-width: 800px) {}
-@media screen and (max-width: 500px) {}
+@media screen and (max-width: 800px) {
+    /* porfolio */
+    #portfolio-wrap{
+        grid-template-columns: var(--grid-template-2);
+        gap: 3rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    /* porfolio */
+    #portfolio-wrap{
+        grid-template-columns: var(--grid-template-1);
+        gap: 3rem;
+    }
+}
