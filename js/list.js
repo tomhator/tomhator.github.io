@@ -28,7 +28,7 @@ for(var i = 0; i < lists.length; i++){
 
   workList.innerHTML = `
     <a href="${lists[i].url}" target="_blank" class="link-box">
-      <span class="image"><img src="./image/portfolio${lists[i].id}.jpg" alt="${lists[i].company}" class="img-responsive"></span>
+      <span class="image"><img src="./image/portfolio${lists[i].id}.JPG" alt="${lists[i].company}" class="img-responsive"></span>
       <span class="text">
         <span class="name">${lists[i].company}</span>
         <span class="days">참여도: ${lists[i].part}</span>
