@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+
+    <!-- Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        function copy(text) {
+            // 복사
+            navigator.clipboard.writeText(text);
+
+            // 복사완료에 대해 Alert으로 띄우기
+            alert("복사되었습니다.");
+        }
+
+        function menuOpen(){
+            const body = document.body;
+            const menu = document.getElementById("menu");
+            const menuBtn = document.getElementById("menu-btn");
+
+            if(menu.classList.contains('active')){
+                body.classList.remove('modal-open');
+                menuBtn.classList.remove('active');
+                menu.classList.remove('active');
+            }else{
+                body.classList.add('modal-open');
+                menuBtn.classList.add('active');
+                menu.classList.add('active');
+            };
+        }
+    </script>
+
+    <title>안유성 포트폴리오</title>
+</head>
+<body>
+    <main id="main">
+        <section id="main-visual">
+            <div class="bg-text">
+                <!-- <p>LET'S</p>
+                <p>FREAKING</p>
+                <p>GO</p>
+
+                <p>AND YOU?</p> -->
+                <p>BLAH BLAH</p>
+            </div>
+            <div class="container">
+                <div class="key-text">
+                    <p>안녕하세요.</p>
+                    <p><strong>안유성</strong>입니다.</p>
+                    <p class="opacity">백수저 아닙니다.</p>
+                </div>
+            </div>
+        </section>
+        <section id="history">
+            <div class="container">
+                <h2>HISTORY</h2>
+                <div class="row">
+                    <div class="col">
+                        <h3>이력</h3>
+                        <ol>
+                            <li>
+                                <p class="tit">
+                                    <span class="term">2019.02. ~ 2024.06.</span>
+                                    <span class="text">메일플러그</span>
+                                </p>
+                                <ul>
+                                    <li>고객사 홈페이지 제작: <b>450여개</b>
+                                        <ul class="inner">
+                                            <li>대학교, 병원, 법률 사무소, 제조업 등 <span class="emp">다양한 업종 경험</span></li>
+                                            <li>웹표준, 웹 접근성 인증 및 크로스 브라우징</li>
+                                        </ul>
+                                    </li>
+                                    <li>홈페이지 제작 빌더 관리
+                                        <ul class="inner">
+                                            <li>PHP/Codeigniter를 활용한 자사 빌더 관리</li>
+                                            <li>신기능 기획, 기능 추가 및 버그 픽스</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        자사 홈페이지 퍼블리싱
+                                        <ul class="inner">
+                                            <li>상품 페이지 리뉴얼</li>
+                                            <li>이벤트 페이지</li>
+                                            <li>홈페이지 유지보수</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        사내 업무 효율 증진을 위해 웹크롤러 구현
+                                        <ul class="inner">
+                                            <li>python의 selenium, openpyxl등 라이브러리 활용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                        <h3>교육 및 학력</h3>
+                        <ol>
+                            <li>
+                                <p class="tit">
+                                    <span class="term">2018.04. ~ 2019.01.</span>
+                                    <span class="text">더조은컴퓨터아트학원</span>
+                                </p>
+                                <ul>
+                                    <li>스마트UI/UX 디자인 컨텐츠 개발 양성과정</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="tit">
+                                    <span class="term">2009.03. ~ 2016.02.</span>
+                                    <span class="text">순천향대학교 정보보학과 학사</span>
+                                </p>
+                                <ul>
+                                    <li>2014~2015 학술동아리 ‘LOGOS’
+                                        <ul class="inner">
+                                            <li>LINC 사업단 Lab 지원 사업 '악성 어플리케이션 자동 실행 방지를 위한 어플리케이션 개발'</li>
+                                            <li>제9회 금융 정보보호 공모전 참여 '지수귀문도를 이용한 새로운 모바일 OTP 기술 제안'</li>
+                                            <li>2014 국가암호공모전 참여 'V2X 환경에서의 블랙박스 영상 무결성 검증시스템 제안'</li>
+                                            <li>2015 순천향산업기술연구소논문집 출품 '안드로이드 환경에서 사용자 유형에 기반한 맞춤형 권한 관리 애플리케이션 개발'</li>
+                                        </ul>
+                                    </li>
+                                    <li>2013~2014 정보보호학과 학생회 활동</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="container">
+                <h2>TECH STACK</h2>
+                <div class="row">
+                    <div class="col">
+                        <h3>Web Publishing</h3>
+                        <ul class="skill">
+                            <li class="lv-3">HTML5<span class="lv-bar"></span></li>
+                            <li class="lv-3">CSS3<span class="lv-bar"></span></li>
+                            <li class="lv-3">JavaScript<span class="lv-bar"></span></li>
+                            <li class="lv-3">jQuery<span class="lv-bar"></span></li>
+                            <li class="lv-2">Bootstrap<span class="lv-bar"></span></li>
+                            <li class="lv-1">PHP(MVC 모델)<span class="lv-bar"></span></li>
+                            <li class="lv-1">mySQL<span class="lv-bar"></span></li>
+                            <li class="lv-1">CodeIgniter<span class="lv-bar"></span></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Design</h3>
+                        <ul class="skill">
+                            <li class="lv-1">Photoshop<span class="lv-bar"></span></li>
+                            <li class="lv-1">Illerstrator<span class="lv-bar"></span></li>
+                            <li class="lv-1">Figma<span class="lv-bar"></span></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Tools & ETC</h3>
+                        <ul class="skill">
+                            <li class="lv-2">Git<span class="lv-bar"></span></li>
+                            <li class="lv-2">Jira<span class="lv-bar"></span></li>
+                            <li class="lv-2">Confluence<span class="lv-bar"></span></li>
+                            <li class="lv-2">Imweb builder<span class="lv-bar"></span></li>
+                            <li class="lv-1">Python<span class="lv-bar"></span></li>
+                            <li class="lv-1">AI Prompt<span class="lv-bar"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="container">
+                <h2 class="title">PORTFOLIO</h2>
+                <div id="portfolio-wrap">
+                    <ul id="portfolio-list" class="row"></ul>
+                </div>
+                <script type="text/javascript" src="./js/list.js"></script>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="text">
+                <p class="copyrights">© 2024 안유성 포트폴리오</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menu -->
+    <div id="menu">
+        <h1 class="home"><a href="/">AHN U</a></h1>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="javascript:void(0);">menu01</a></li>
+                <li><a href="javascript:void(0);">menu02</a></li>
+                <li><a href="javascript:void(0);">menu03</a></li>
+                <li><a href="javascript:void(0);">menu04</a></li>
+                <li><a href="javascript:void(0);">menu05</a></li>
+            </ul>
+        </nav>
+        <div class="contact">
+            <ul>
+                <li><button onclick="copy('010-2089-9595')"><span class="material-symbols-outlined">smartphone</span>010-2089-9595</button></li>
+                <li><button onclick="copy('theoe0328@naver.com')"><span class="material-symbols-outlined">mail</span>theoe0328@naver.com</button></li>
+            </ul>
+        </div>
+    </div>
+    <button id="menu-btn" type="button" onclick="menuOpen();">
+        <span class="hb-bar"></span>
+        <span class="hb-bar"></span>
+        <span class="hb-bar"></span>
+        <span class="hb-bar"></span>
+    </button>
+</body>
+</html>
