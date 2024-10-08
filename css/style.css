@@ -131,19 +131,21 @@ body.modal-open{
 #menu .nav{
     margin: 6rem 0 7rem;
 }
-#menu .gnb{}
+#menu .gnb{
+    text-align: center;
+}
 .gnb > li{}
 .gnb > li:not(:first-child){
     margin-top: 2.2rem;
 }
-.gnb > li > a{
+.gnb > li > button{
     color: var(--color-dark);
     font-size: var(--font-size-32);
     font-weight: 600;
     letter-spacing: -0.023em;
 }
-.gnb > li > a:hover,
-.gnb > li > a:focus{
+.gnb > li > button:hover,
+.gnb > li > button:focus{
     color: var(--color-main);
 }
 
@@ -180,9 +182,9 @@ body.modal-open{
     transition: .25s ease-in-out;
 }
 
-#menu-btn .hb-bar:nth-child(1) {top: 16px;}  
+#menu-btn .hb-bar:nth-child(1) {top: 18px;}  
 #menu-btn .hb-bar:nth-child(2), #menu-btn .hb-bar:nth-child(3) {top: 25px;  }
-#menu-btn .hb-bar:nth-child(4) {top: 34px;  }
+#menu-btn .hb-bar:nth-child(4) {top: 32px;}
   
 #menu-btn.active .hb-bar:nth-child(1) {
     top: 18px;
@@ -310,7 +312,9 @@ body.modal-open{
     line-height: 1;
 }
 
-#main-visual .key-text{}
+#main-visual .key-text{
+    margin-bottom: 6rem;
+}
 #main-visual .key-text p{
     font-size: 8rem;
     font-weight: 900;
@@ -322,6 +326,7 @@ body.modal-open{
     opacity: 0.013;
     font-size: 5rem;
     cursor: default;
+    margin-top: -6rem;
 }
 #main-visual .key-text p.opacity:after{
     content: '';
@@ -340,9 +345,12 @@ body.modal-open{
 }
 
 #main-visual .contact{}
+#main-visual .contact ul li button{font-size: var(--font-size-16);}
 
 /* history */
-#history{}
+#history{
+    margin-top: 12rem;
+}
 #history ol{}
 #history ol > li{}
 #history ol > li:not(:first-child){margin-top: 2.9rem;}
@@ -499,21 +507,10 @@ footer{
 footer .text{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
-footer .text .contact{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-footer .text .contact .material-symbols-outlined{
-    font-size: var(--font-size-30);
-    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 1, 'opsz' 20;;
-}
-footer .text .contact .txt{
-    font-size: var(--font-size-18);
-    font-weight: 300;
-}
+footer .text .contact{}
+footer .text .contact ul li button{color: #fff;opacity: 0.6;font-weight:100;}
 footer .text .copyrights{
     font-size: var(--font-size-16);
     opacity: 0.6;
@@ -532,12 +529,6 @@ footer .text .copyrights{
     /* porfolio */
     #portfolio-wrap{
         gap: 3rem;
-    }
-
-    /* about */
-    .about-wrap{
-        grid-template-columns: var(--grid-template-1);
-        gap: 4rem;
     }
 }
 @media screen and (max-width: 800px) {
