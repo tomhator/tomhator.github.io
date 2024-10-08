@@ -27,8 +27,17 @@ function menuOpen(){
 
 // 메뉴 이동
 function menuScroll(e){
+  const body = document.body;
+  const menu = document.getElementById("menu");
+  const menuBtn = document.getElementById("menu-btn");
+
   const moveTo = e.getAttribute("data-moveTo");
   const el = document.querySelector(`#${moveTo}`);
+
+  body.classList.remove('modal-open');
+  menuBtn.classList.remove('active');
+  menu.classList.remove('active');
+
 
   window.scrollTo({
       top: el.offsetTop + 60,
