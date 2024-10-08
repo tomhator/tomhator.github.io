@@ -34,6 +34,4 @@ function menuScroll(e){
       top: el.offsetTop + 60,
       behavior: "smooth",
   });
-  // setIsVisibleFloating(!isVisibleFloating);
-  setIsVisibleSideMenu(!isVisibleSideMenu);
 };
