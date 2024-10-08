@@ -305,18 +305,18 @@ body.modal-open{
 #main-visual .circle-big{
     bottom: -32rem;
     right: -18rem;
-    width: 770px;
-    height: 770px;
+    width: 45vw;
+    height: 45vw;
     background: var(--color-main);
     opacity: 0.9;
 }
 #main-visual .circle-small{
     position: absolute;
-    bottom: -14rem;
+    bottom: -22rem;
     left: -8rem;
     display: block;
-    width: 430px;
-    height: 430px;
+    width: 27vw;
+    height: 27vw;
     background: var(--color-main);
     opacity: 0.1;
 }
@@ -535,21 +535,67 @@ footer .text .copyrights{
         padding-left: 15px;
         padding-right: 15px;
     }
-    /* porfolio */
-    #portfolio-wrap{
-        gap: 3rem;
-    }
 }
 @media screen and (max-width: 800px) {
-    /* porfolio */
-    #portfolio-wrap{
+    /* main-visual */
+    #main-visual .circle-big{
+    bottom: -19rem;
+    right: -7rem;
+    width: 55rem;
+    height: 55rem;
+}
+    #main-visual .circle-small{
+    bottom: auto;
+    top: -9rem;
+}
+    /* history */
+    #history .row{
+    grid-template-columns: var(--grid-template-1);
+    gap: 5rem 0;
+}
+    
+    /* tech */
+    #skills .row {
+        flex-direction: column;
+    }
+    .skill {
+        grid-template-rows: auto;
+    }
+    
+    #portfolio-wrap #portfolio-list{
         grid-template-columns: var(--grid-template-2);
         gap: 3rem;
     }
 }
 @media screen and (max-width: 500px) {
+    /* main-visual */
+    #main-visual .key-text {
+        margin-bottom: 3rem;
+    }
+    #main-visual .key-text p{
+        font-size: 7rem;
+    }
+    #main-visual .key-text p.opacity {display: none;}
+    #main-visual .circle-big{
+        bottom: -19rem;
+        right: -20rem;
+    }
+        #main-visual .circle-small{
+        bottom: auto;
+        top: -12rem;
+        width: 28rem;
+        height: 28rem;
+    }
+    #main-visual .contact ul {
+        display: flex;
+        gap: 1.6rem;
+    }
+    #main-visual .contact ul li button {
+        font-size: var(--font-size-24);
+    }
+    
     /* porfolio */
-    #portfolio-wrap{
+    #portfolio-wrap #portfolio-list{
         grid-template-columns: var(--grid-template-1);
         gap: 3rem;
     }
