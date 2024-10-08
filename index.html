@@ -26,30 +26,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script type="text/javascript" src="./js/main.js"></script>
     <script>
-        function copy(text) {
-            // 복사
-            navigator.clipboard.writeText(text);
-
-            // 복사완료에 대해 Alert으로 띄우기
-            alert("복사되었습니다.");
-        }
-
-        function menuOpen(){
-            const body = document.body;
-            const menu = document.getElementById("menu");
-            const menuBtn = document.getElementById("menu-btn");
-
-            if(menu.classList.contains('active')){
-                body.classList.remove('modal-open');
-                menuBtn.classList.remove('active');
-                menu.classList.remove('active');
-            }else{
-                body.classList.add('modal-open');
-                menuBtn.classList.add('active');
-                menu.classList.add('active');
-            };
-        }
+        
     </script>
 
     <title>안유성 포트폴리오</title>
@@ -57,19 +36,19 @@
 <body>
     <main id="main">
         <section id="main-visual">
-            <div class="bg-text">
-                <!-- <p>LET'S</p>
-                <p>FREAKING</p>
-                <p>GO</p>
-
-                <p>AND YOU?</p> -->
-                <p>BLAH BLAH</p>
-            </div>
+            <div class="circle-big"></div>
+            <div class="circle-small"></div>
             <div class="container">
                 <div class="key-text">
                     <p>안녕하세요.</p>
                     <p><strong>안유성</strong>입니다.</p>
                     <p class="opacity">백수저 아닙니다.</p>
+                </div>
+                <div class="contact">
+                    <ul>
+                        <li><button onclick="copy('010-2089-9595')"><span class="material-symbols-outlined">smartphone</span>010-2089-9595</button></li>
+                        <li><button onclick="copy('theoe0328@naver.com')"><span class="material-symbols-outlined">mail</span>theoe0328@naver.com</button></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -202,6 +181,12 @@
     <footer>
         <div class="container">
             <div class="text">
+                <div class="contact">
+                    <ul>
+                        <li><button onclick="copy('010-2089-9595')"><span class="material-symbols-outlined">smartphone</span>010-2089-9595</button></li>
+                        <li><button onclick="copy('theoe0328@naver.com')"><span class="material-symbols-outlined">mail</span>theoe0328@naver.com</button></li>
+                    </ul>
+                </div>
                 <p class="copyrights">© 2024 안유성 포트폴리오</p>
             </div>
         </div>
@@ -212,11 +197,10 @@
         <h1 class="home"><a href="/">AHN U</a></h1>
         <nav class="nav">
             <ul class="gnb">
-                <li><a href="javascript:void(0);">menu01</a></li>
-                <li><a href="javascript:void(0);">menu02</a></li>
-                <li><a href="javascript:void(0);">menu03</a></li>
-                <li><a href="javascript:void(0);">menu04</a></li>
-                <li><a href="javascript:void(0);">menu05</a></li>
+                <li><button onclick="menuScroll(this);" data-moveTo="main-visual">HOME</button></li>
+                <li><button onclick="menuScroll(this);" data-moveTo="history">HISTORY</button></li>
+                <li><button onclick="menuScroll(this);" data-moveTo="skills">TECK STACK</button></li>
+                <li><button onclick="menuScroll(this);" data-moveTo="portfolio">PORTFOLIO</button></li>
             </ul>
         </nav>
         <div class="contact">
