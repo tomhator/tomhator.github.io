@@ -206,7 +206,9 @@ body.modal-open{
     align-items: center;
 }
 .contact ul li{}
-.contact ul li button{
+.contact ul li button,
+.contact ul li a{
+    color: var(--color-dark);
     font-size: 1.3rem;
     display: flex;
     align-items: center;
@@ -214,9 +216,12 @@ body.modal-open{
     gap: 0.6rem;
     opacity: 0.8;
 }
-.contact ul li button .material-symbols-outlined{}
-.contact ul li button:hover{}
-.contact ul li button:hover .material-symbols-outlined{}
+.contact ul li button .material-symbols-outlined,
+.contact ul li a .material-symbols-outlined{}
+.contact ul li button:hover,
+.contact ul li a:hover{}
+.contact ul li button:hover .material-symbols-outlined,
+.contact ul li a:hover .material-symbols-outlined{}
 
 /**** MAIN ****/
 
@@ -354,7 +359,37 @@ body.modal-open{
 }
 
 #main-visual .contact{}
-#main-visual .contact ul li button{font-size: var(--font-size-16);}
+#main-visual .contact ul li button{font-size: var(--font-size-22);}
+#main-visual .contact .resume{
+    display: flex;
+    margin: 2rem 0 0;
+    font-size: var(--font-size-22);
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+#main-visual .contact .resume .material-symbols-outlined{
+    display: block;
+    padding: 0.8rem;
+    background: var(--color-main);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    color: #fff;
+    font-size: 2rem;
+}
+#main-visual .contact .resume:hover{}
+#main-visual .contact .resume:hover .material-symbols-outlined{
+    animation: wobble 2s ease infinite;
+}
+@keyframes wobble {
+  0% { transform: translateX(0%);}
+  13% { transform: translateX(15%);}
+  26% { transform: translateX(0%);}
+  39% { transform: translateX(15%);}
+  52% { transform: translateX(0%);}
+  100% { transform: translateX(0%);}
+}
 
 /* history */
 #history{
@@ -471,6 +506,8 @@ body.modal-open{
     display: block;
     overflow: hidden;
     border-radius: 2rem;
+    box-shadow: 0px 5px 12px -9px rgba(0,0,0,0.23);
+    transition: all 0.4s ease;
 }
 #portfolio-wrap #portfolio-list .link-box .image{
     display: block;
@@ -496,6 +533,7 @@ body.modal-open{
     transition: all .3s ease;
     opacity: 0;
 }
+#portfolio-wrap #portfolio-list .link-box:hover{box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.23);}
 #portfolio-wrap #portfolio-list .link-box:hover .text{opacity: 1;}
 #portfolio-wrap #portfolio-list .link-box .text > span{}
 #portfolio-wrap #portfolio-list .link-box .text .name{

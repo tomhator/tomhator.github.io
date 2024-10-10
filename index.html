@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="./image/favicon.png">
+
     <!-- Pretendard -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 
@@ -27,9 +29,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script type="text/javascript" src="./js/main.js"></script>
-    <script>
-        
-    </script>
+    <script type="module" src="./js/project.js"></script>
+    <script defer type="module" src="./js/list.js"></script>
 
     <title>안유성 포트폴리오</title>
 </head>
@@ -49,6 +50,7 @@
                         <li><button onclick="copy('010-2089-9595')"><span class="material-symbols-outlined">smartphone</span>010-2089-9595</button></li>
                         <li><button onclick="copy('theoe0328@naver.com')"><span class="material-symbols-outlined">mail</span>theoe0328@naver.com</button></li>
                     </ul>
+                    <a href="./sub/resume.html" class="resume">이력서 보러가기<span class="material-symbols-outlined">arrow_forward</span></a>
                 </div>
             </div>
         </section>
@@ -73,7 +75,7 @@
                                     </li>
                                     <li>홈페이지 제작 빌더 관리
                                         <ul class="inner">
-                                            <li>PHP/Codeigniter를 활용한 자사 빌더 관리</li>
+                                            <li>PHP/Codeigniter를 활용한 <span class="emp">자사 빌더 관리</span></li>
                                             <li>신기능 기획, 기능 추가 및 버그 픽스</li>
                                         </ul>
                                     </li>
@@ -86,7 +88,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        사내 업무 효율 증진을 위해 웹크롤러 구현
+                                        사내 업무 효율 증진을 위해 <span class="emp">웹크롤러 구현</span>
                                         <ul class="inner">
                                             <li>python의 selenium, openpyxl등 라이브러리 활용</li>
                                         </ul>
@@ -173,7 +175,6 @@
                 <div id="portfolio-wrap">
                     <ul id="portfolio-list" class="row"></ul>
                 </div>
-                <script type="text/javascript" src="./js/list.js"></script>
             </div>
         </section>
     </main>
@@ -206,6 +207,7 @@
             <ul>
                 <li><button onclick="copy('010-2089-9595')"><span class="material-symbols-outlined">smartphone</span>010-2089-9595</button></li>
                 <li><button onclick="copy('theoe0328@naver.com')"><span class="material-symbols-outlined">mail</span>theoe0328@naver.com</button></li>
+                <li><a href="./sub/resume.html" class="resume"><span class="material-symbols-outlined">description</span>이력서 보러가기</a></li>
             </ul>
         </div>
     </div>
