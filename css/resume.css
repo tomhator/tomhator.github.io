@@ -57,6 +57,7 @@
 .table-resume tr td button{}
 
 .cover_letter{
+    display: none;
     grid-template-columns: var(--grid-template-3);
     margin-top: 4rem;
 }
