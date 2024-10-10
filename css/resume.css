@@ -56,6 +56,40 @@
 }
 .table-resume tr td button{}
 
+.cover_letter{
+    grid-template-columns: var(--grid-template-3);
+    margin-top: 4rem;
+}
+.cover_letter .col{
+    display: flex;
+    background: #f8f8f8;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 2rem;
+}
+.cover_letter .material-symbols-outlined{
+    display: block;
+    font-size: 7.8rem;
+    font-variation-settings: 
+    'FILL' 0, 
+    'wght' 600, 
+    'GRAD' 0, 
+    'opsz' 4;
+    background: var(--color-main);
+    color: #fff;
+    aspect-ratio: 1;
+    padding: 3rem;
+    border-radius: 50%;
+}
+#resume .cover_letter h5{}
+.cover_letter p{
+    font-size: var(--font-size-16);
+    line-height: 1.4;
+}
+.cover_letter p:last-child{margin: 0;}
+
 #resume .tech{
     grid-template-columns: var(--grid-template-3);
     gap: 9rem;
@@ -182,5 +216,37 @@
 
 }
 @media screen and (max-width: 500px) {
+    .cover_letter {
+        /* grid-template-columns: var(--grid-template-1); */
+        margin-top: 4rem;
+        gap: 1.5rem;
+    }
+    .cover_letter .col {
+        padding: 1.5rem;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+    .cover_letter .material-symbols-outlined{
+    font-size: 5rem;
+    padding: 1.7rem;
+}
 
+    #resume .tech {
+        grid-template-columns: var(--grid-template-1);
+        gap: 3rem;
+    }
+    #resume .tech .skill{
+        display: flex;
+        gap: 0rem 2rem;
+        flex-wrap: wrap;
+    }
+    #resume .tech .skill li{
+        width: calc((100% / 2) - 1rem);
+    }
+    #resume .tech .skill li:not(:first-child){margin: 0;}
+
+    #project-list {
+        grid-template-columns: var(--grid-template-2);
+    }
 }
