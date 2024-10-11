@@ -246,30 +246,6 @@ body.modal-open{
 #main section h3{
     font-size: var(--font-size-32);
     font-weight: 700;
-    /* text-align: center; */
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin: 0 0 2rem;
-}
-#main section h4{
-    font-size: var(--font-size-24);
-    font-weight: 600;
-    /* text-align: center; */
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin: 0 0 4rem;
-}
-#main section h2{
-    font-size: var(--font-size-60);
-    font-weight: 800;
-    /* text-align: center; */
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin: 0 0 4rem;
-}
-#main section h3{
-    font-size: var(--font-size-32);
-    font-weight: 700;
     line-height: 1;
     letter-spacing: -0.03em;
     margin: 0 0 2rem;
@@ -360,16 +336,27 @@ body.modal-open{
 
 #main-visual .contact{}
 #main-visual .contact ul li button{font-size: var(--font-size-22);}
-#main-visual .contact .resume{
+
+/* history */
+#history{
+    /* margin-top: 12rem; */
+}
+#history .title{
     display: flex;
-    margin: 2rem 0 0;
+    align-items: center;
+    margin: 0 0 4rem;
+    gap: 5rem;
+}
+#history .title h2{margin: 0;}
+#history .title .resume{
+    display: flex;
     font-size: var(--font-size-22);
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     font-weight: 600;
     color: var(--color-dark);
 }
-#main-visual .contact .resume .material-symbols-outlined{
+#history .title .resume .material-symbols-outlined{
     display: block;
     padding: 0.8rem;
     background: var(--color-main);
@@ -378,8 +365,8 @@ body.modal-open{
     color: #fff;
     font-size: 2rem;
 }
-#main-visual .contact .resume:hover{}
-#main-visual .contact .resume:hover .material-symbols-outlined{
+#history .title .resume:hover{}
+#history .title .resume:hover .material-symbols-outlined{
     animation: wobble 2s ease infinite;
 }
 @keyframes wobble {
@@ -389,11 +376,6 @@ body.modal-open{
   39% { transform: translateX(15%);}
   52% { transform: translateX(0%);}
   100% { transform: translateX(0%);}
-}
-
-/* history */
-#history{
-    /* margin-top: 12rem; */
 }
 #history ol{}
 #history ol > li{}
@@ -631,6 +613,9 @@ footer .text .copyrights{
     #main-visual .contact ul li button {
         font-size: var(--font-size-24);
     }
+
+    /* history */
+    #history .title{flex-direction: column;align-items: flex-start;gap: 2rem;}
     
     /* porfolio */
     #portfolio-wrap #portfolio-list{

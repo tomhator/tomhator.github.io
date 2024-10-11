@@ -56,40 +56,17 @@
 }
 .table-resume tr td button{}
 
-.cover_letter{
-    display: none;
-    grid-template-columns: var(--grid-template-3);
-    margin-top: 4rem;
+.summary{
+    padding: 3rem 3rem;
+    margin: 2rem 0 0;
+    border: 1px solid #ddd;
 }
-.cover_letter .col{
-    display: flex;
-    background: #f8f8f8;
-    padding: 3rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    border-radius: 2rem;
-}
-.cover_letter .material-symbols-outlined{
-    display: block;
-    font-size: 7.8rem;
-    font-variation-settings: 
-    'FILL' 0, 
-    'wght' 600, 
-    'GRAD' 0, 
-    'opsz' 4;
-    background: var(--color-main);
-    color: #fff;
-    aspect-ratio: 1;
-    padding: 3rem;
-    border-radius: 50%;
-}
-#resume .cover_letter h5{}
-.cover_letter p{
+.summary p{
     font-size: var(--font-size-16);
+    margin: 0 0 1rem;
     line-height: 1.4;
 }
-.cover_letter p:last-child{margin: 0;}
+.summary p:last-child{margin-bottom: 0;}
 
 #resume .tech{
     grid-template-columns: var(--grid-template-3);
@@ -103,22 +80,19 @@
 }
 #resume .tech .skill li{}
 #resume .tech .skill li:not(:first-child){margin-top: 1rem;}
-
+#resume .cover_letter{}
+#resume .cover_letter .col{}
+#resume .cover_letter .col h5{}
+#resume .cover_letter .col p{}
 #project-list{
     grid-template-columns: var(--grid-template-4);
     gap: 1.5rem;
     padding: 3rem;
-    background: #f8f8f8;
+    border: 1px solid #ddd;
 }
 #project-list .col{}
 #project-list .col.core{
     grid-column: 1 / 4;
-}
-#project-list .summary{
-    /* display: flex; */
-    /* border-bottom: 1px solid #ddd; */
-    /* padding: 0 0 1rem; */
-    /* margin: 0 0 1.5rem; */
 }
 #project-list .des{}
 
@@ -217,21 +191,9 @@
 
 }
 @media screen and (max-width: 500px) {
-    .cover_letter {
-        /* grid-template-columns: var(--grid-template-1); */
-        margin-top: 4rem;
-        gap: 1.5rem;
-    }
-    .cover_letter .col {
-        padding: 1.5rem;
-        align-items: center;
-        gap: 1rem;
-        text-align: center;
-    }
-    .cover_letter .material-symbols-outlined{
-    font-size: 5rem;
-    padding: 1.7rem;
-}
+    .cover_letter {}
+    .cover_letter .col {}
+    .cover_letter .material-symbols-outlined{}
 
     #resume .tech {
         grid-template-columns: var(--grid-template-1);
