@@ -67,6 +67,7 @@
     line-height: 1.4;
 }
 .summary p:last-child{margin-bottom: 0;}
+.summary p b{color: var(--color-main)}
 
 #resume .tech{
     grid-template-columns: var(--grid-template-3);
