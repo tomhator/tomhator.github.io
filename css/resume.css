@@ -100,6 +100,9 @@
 #resume .li-career{
     margin: 0 0 1rem;
 }
+#resume .li-career.common{
+    margin: 0 0 1.5rem;
+}
 #resume .li-career > li{
     position: relative;
     font-size: var(--font-size-16);

@@ -310,6 +310,12 @@ body.modal-open{
     font-weight: 900;
     line-height: 1.2;
 }
+#main-visual .key-text p.desc{
+    font-size: var(--font-size-22);
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 2.3rem 0 0;
+}
 #main-visual .key-text p.opacity{
     position: relative;
     text-align: right;
