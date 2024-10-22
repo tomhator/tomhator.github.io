@@ -303,6 +303,7 @@ body.modal-open{
 }
 
 #main-visual .key-text{
+    position: relative;
     margin-bottom: 6rem;
 }
 #main-visual .key-text p{
@@ -317,12 +318,12 @@ body.modal-open{
     margin: 2.3rem 0 0;
 }
 #main-visual .key-text p.opacity{
-    position: relative;
-    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     opacity: 0.013;
-    font-size: 5rem;
+    font-size: 7rem;
     cursor: default;
-    margin-top: -6rem;
 }
 #main-visual .key-text p.opacity:after{
     content: '';
