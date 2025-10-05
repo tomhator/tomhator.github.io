@@ -494,6 +494,119 @@ body.modal-open{
     line-height: 1.4;
 }
 
+/* study */
+#study .row{
+    grid-template-columns: var(--grid-template-1);
+}
+.study-list{
+    display: grid;
+    grid-template-columns: var(--grid-template-3);
+    gap: 2rem;
+}
+.study-item{
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+.study-item:hover{
+    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+.study-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.study-header h4{
+    font-size: var(--font-size-24);
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-dark);
+}
+.status{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: var(--font-size-16);
+    font-weight: 600;
+}
+.status.completed{
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+.status.in-progress{
+    background: #fff3e0;
+    color: #f57c00;
+}
+.study-desc{
+    font-size: var(--font-size-18);
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+.study-links{
+    display: flex;
+    gap: 1rem;
+}
+.study-link{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--color-main);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: var(--font-size-16);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.study-link:hover{
+    background: var(--color-main-hover);
+    transform: translateY(-1px);
+}
+.study-link .material-symbols-outlined{
+    font-size: 1.8rem;
+}
+.study-tech{
+    margin-bottom: 1rem;
+}
+.tech-label{
+    font-size: var(--font-size-16);
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-right: 0.5rem;
+}
+.tech-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.tech-tag{
+    background: var(--color-main);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: var(--font-size-16);
+    font-weight: 500;
+}
+.study-period{
+    margin-bottom: 1.5rem;
+}
+.period-label{
+    font-size: var(--font-size-16);
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-right: 0.5rem;
+}
+.period-text{
+    font-size: var(--font-size-16);
+    color: #666;
+}
+
 /* portfolio */
 #portfolio-wrap{}
 #portfolio-wrap #portfolio-list{
