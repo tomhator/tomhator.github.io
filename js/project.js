@@ -2,6 +2,11 @@
 
 function PortfolioList(target){
     const port_wrap = document.getElementById(target);
+    if (!port_wrap) {
+        console.error(`Element with id "${target}" not found`);
+        return;
+    }
+    
     for(var i = 0; i < lists.length; i++){
       const workList = document.createElement(`li`);
       
@@ -23,5 +28,7 @@ function PortfolioList(target){
     }
   }
   
-  
-  PortfolioList("portfolio-list");
+// DOM이 완전히 로드된 후 실행
+document.addEventListener('DOMContentLoaded', function() {
+    PortfolioList("portfolio-list");
+});
