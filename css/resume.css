@@ -54,6 +54,9 @@
     width: 180px;
     color: var(--color-main-hover);
 }
+.table-resume tr td.date .working{
+    color: var(--color-main);
+}
 .table-resume tr td button{}
 
 .summary{

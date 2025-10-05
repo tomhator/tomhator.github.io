@@ -385,6 +385,9 @@ body.modal-open{
 #history ol > li .tit .term{
     font-family: "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+#history ol > li .tit .term .working{
+    color: var(--color-main);
+}
 #history ol > li .tit .text{}
 #history ol > li > ul{}
 #history ol > li > ul > li{
