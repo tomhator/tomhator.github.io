@@ -4,28 +4,36 @@ const skills  = [
   {id: "15",desc: "Nunjucks를 활용하여 템플릿 엔진을 구현하였습니다.",},{id: "16",desc: "SCSS를 활용하여 스타일을 구현하였습니다. mixin, 변수, 상속 등 다양한 기능을 활용하여 코드를 재사용하고 유지보수를 용이하게 했습니다.",},
 ];
 
-const cursor = document.querySelector('#cursor-follow');
+// DOM이 완전히 로드된 후 실행
+document.addEventListener('DOMContentLoaded', function() {
+  const cursor = document.querySelector('#cursor-follow');
+  
+  if (!cursor) {
+    console.error('Element with id "cursor-follow" not found');
+    return;
+  }
 
-document.addEventListener('mousemove', (e) => {
-  const mouseX = e.pageX + 10; // document의 x좌표값
-  const mouseY = e.pageY + 10; // document의 y좌표값
+  document.addEventListener('mousemove', (e) => {
+    const mouseX = e.pageX + 10; // document의 x좌표값
+    const mouseY = e.pageY + 10; // document의 y좌표값
 
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top = mouseY + 'px';
-})
-
-const skill_item = document.querySelectorAll("#skills .skill li");
-
-skill_item.forEach(item => {
-  let num = item.getAttribute('data-hover');
-  num = Number(num);
-
-  item.addEventListener('mouseover', (e) => {
-    cursor.classList.add("hover");
-    cursor.innerHTML = `<p>${skills[num].desc}</p>`
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
   })
-  item.addEventListener('mouseleave', (e) => {
-    cursor.classList.remove("hover");
-    cursor.innerHTML = `<p></p>`
+
+  const skill_item = document.querySelectorAll("#skills .skill li");
+
+  skill_item.forEach(item => {
+    let num = item.getAttribute('data-hover');
+    num = Number(num);
+
+    item.addEventListener('mouseover', (e) => {
+      cursor.classList.add("hover");
+      cursor.innerHTML = `<p>${skills[num].desc}</p>`
+    })
+    item.addEventListener('mouseleave', (e) => {
+      cursor.classList.remove("hover");
+      cursor.innerHTML = `<p></p>`
+    })
   })
-})
+});
