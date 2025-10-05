@@ -1,4 +1,4 @@
-import lists from "./list.js";
+// Import removed for file:// protocol compatibility
 
 function PortfolioList(target){
     const port_wrap = document.getElementById(target);
