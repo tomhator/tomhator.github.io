@@ -569,6 +569,8 @@ body.modal-open{
     font-size: 1.8rem;
 }
 .study-tech{
+    display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 }
 .tech-label{
