@@ -22,6 +22,7 @@
     --grid-template-4: repeat(4, 1fr);
 
     /* font-size */
+    --font-size-14: 1.4rem;
     --font-size-16: 1.6rem;
     --font-size-18: 1.8rem;
     --font-size-22: 2.2rem;
@@ -521,10 +522,7 @@ body.modal-open{
     margin-bottom: 1rem;
 }
 .study-header h4{
-    font-size: var(--font-size-24);
-    font-weight: 700;
-    margin: 0;
-    color: var(--color-dark);
+    margin: 0 !important;
 }
 .status{
     padding: 0.5rem 1rem;
@@ -559,7 +557,7 @@ body.modal-open{
     color: #fff;
     text-decoration: none;
     border-radius: 0.5rem;
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-14);
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -590,7 +588,7 @@ body.modal-open{
     color: #fff;
     padding: 0.3rem 0.8rem;
     border-radius: 1rem;
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-14);
     font-weight: 500;
 }
 .study-period{
