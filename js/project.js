@@ -35,19 +35,15 @@ function PortfolioList(target, listsData){
   
 // DOM이 완전히 로드된 후 실행
 document.addEventListener('DOMContentLoaded', function() {
-    // lists 변수가 정의되었는지 확인
-    if (typeof window.lists === 'undefined' && typeof lists === 'undefined') {
-        console.error('lists variable is not defined. Make sure list.js is loaded before project.js');
-        return;
+    // lists 변수가 정의되었는지 확인 (약간의 지연을 두고 재시도)
+    function tryLoadPortfolio() {
+        if (typeof window.lists !== 'undefined' && window.lists && window.lists.length > 0) {
+            PortfolioList("portfolio-list", window.lists);
+        } else {
+            console.log('lists not ready, retrying...');
+            setTimeout(tryLoadPortfolio, 100);
+        }
     }
     
-    // 전역 스코프에서 lists 변수 사용
-    const listsData = window.lists || lists;
-    
-    if (!listsData || listsData.length === 0) {
-        console.error('lists data is empty or not available');
-        return;
-    }
-    
-    PortfolioList("portfolio-list", listsData);
+    tryLoadPortfolio();
 });
