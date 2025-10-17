@@ -2,6 +2,16 @@
 const studyData = [
     {
         id: 1,
+        title: "간호사 근무표 자동화",
+        status: "completed",
+        description: "AI 활용, 기획, next.js, TypeScript",
+        githubUrl: "https://nurse-schdule-2jyi4jag7-yusungs-projects.vercel.app/",
+        technologies: ["AI", "기획", "Next.js", "TypeScript"],
+        startDate: "2025-10",
+        endDate: "2025-10"
+    },
+    {
+        id: 2,
         title: "Next.js 학습",
         status: "completed",
         description: "Next.js 프레임워크를 활용한 웹 개발 학습",
@@ -11,7 +21,7 @@ const studyData = [
         endDate: "2025-06"
     },
     {
-        id: 2,
+        id: 3,
         title: "당근마켓 클론 프로젝트",
         status: "in-progress",
         description: "당근마켓을 모티브로 한 중고거래 플랫폼 개발",
