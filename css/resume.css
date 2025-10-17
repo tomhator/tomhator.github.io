@@ -88,6 +88,17 @@
 #resume .cover_letter .col{}
 #resume .cover_letter .col h5{}
 #resume .cover_letter .col p{}
+#project-list{
+    grid-template-columns: var(--grid-template-4);
+    gap: 1.5rem;
+    padding: 3rem;
+    border: 1px solid #ddd;
+}
+#project-list .col{}
+#project-list .col.core{
+    grid-column: 1 / 4;
+}
+#project-list .des{}
 
 #resume .li-career{
     margin: 0 0 1rem;
