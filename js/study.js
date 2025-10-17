@@ -4,11 +4,11 @@ const studyData = [
         id: 1,
         title: "간호사 근무표 자동화",
         status: "completed",
-        description: "AI 활용, 기획, next.js, TypeScript",
+        description: "수간호사의 경험적 지식과 AI 기반 바이브 코딩을 결합하여, 복잡한 제약 조건을 반영한 '최적화 자동화 솔루션' 프로젝트.",
         githubUrl: "https://nurse-schdule-2jyi4jag7-yusungs-projects.vercel.app/",
-        technologies: ["AI", "기획", "Next.js", "TypeScript"],
-        startDate: "2025-10",
-        endDate: "2025-10"
+        technologies: ["Cursor AI", "Vibe Coding", "Next.js", "TypeScript"],
+        startDate: "2025-10 (총 6일)",
+        endDate: null
     },
     {
         id: 2,
@@ -61,7 +61,7 @@ function renderStudySection() {
             <div class="study-links">
                 <a href="${study.githubUrl}" target="_blank" class="study-link">
                     <span class="material-symbols-outlined">code</span>
-                    GitHub
+                    ${study.title === "간호사 근무표 자동화" ? "Visit" : "GitHub"}
                 </a>
             </div>
         </div>

@@ -251,7 +251,7 @@ body.modal-open{
     margin-left: 1.5rem;
 }
 #main section h4{
-    font-size: var(--font-size-24);
+    font-size: var(--font-size-18);
     font-weight: 600;
     /* text-align: center; */
     line-height: 1;
@@ -500,26 +500,26 @@ body.modal-open{
     grid-template-columns: var(--grid-template-1);
 }
 .study-list{
-    display: grid;
-    grid-template-columns: var(--grid-template-3);
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 .study-item{
     background: #fff;
-    border-radius: 1rem;
-    padding: 2rem;
-    border: 1px solid #e0e0e0;
+    padding: 2rem 0rem;
+    border-top: 1px solid #e0e0e0;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    /* justify-content: space-between; */
 }
 .study-item:hover{
-    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
 }
 .study-header{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    gap: 1rem;
+    width: 15%;
 }
 .study-header h4{
     margin: 0 !important;
@@ -527,7 +527,7 @@ body.modal-open{
 .status{
     padding: 0.5rem 1rem;
     border-radius: 2rem;
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-14);
     font-weight: 600;
 }
 .status.completed{
@@ -539,10 +539,10 @@ body.modal-open{
     color: #f57c00;
 }
 .study-desc{
-    font-size: var(--font-size-18);
+    font-size: var(--font-size-14);
     color: #666;
     line-height: 1.5;
-    margin-bottom: 1.5rem;
+    width: 25%;
 }
 .study-links{
     display: flex;
@@ -551,6 +551,7 @@ body.modal-open{
 .study-link{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
     background: var(--color-main);
@@ -560,6 +561,7 @@ body.modal-open{
     font-size: var(--font-size-14);
     font-weight: 500;
     transition: all 0.3s ease;
+    min-width: 100px;
 }
 .study-link:hover{
     background: var(--color-main-hover);
@@ -571,7 +573,7 @@ body.modal-open{
 .study-tech{
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    flex: 1;
 }
 .tech-label{
     font-size: var(--font-size-16);
@@ -583,7 +585,6 @@ body.modal-open{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 0.5rem;
 }
 .tech-tag{
     background: var(--color-main);
@@ -593,9 +594,7 @@ body.modal-open{
     font-size: var(--font-size-14);
     font-weight: 500;
 }
-.study-period{
-    margin-bottom: 1.5rem;
-}
+.study-period{min-width: 220px;}
 .period-label{
     font-size: var(--font-size-16);
     font-weight: 600;
