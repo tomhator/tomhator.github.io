@@ -80,4 +80,4 @@ portfolio/
 - **다양한 업종** 경험을 통한 맞춤형 솔루션 제공
 
 ---
-© 2024 안유성 포트폴리오. All rights reserved.
+© 2026 안유성 포트폴리오. All rights reserved.
